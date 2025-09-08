@@ -1,0 +1,49 @@
+<% layout ("/layouts/boilerplate") %>
+    <title>Wanderlust</title>
+  <div class ="col-8 offset-2"> <!--Here col-8 gives space of 8 and offset give space from left -->
+    <h3>create a new list</h3>
+    <br /><br />
+    <form method ="POST" action ="/listings" class="needs-validation" novalidate enctype="multipart/form-data">  <!--Here need-validation is a bootstrip class for unvalid input to the input space along with the need-validation we use novalidation also and to use this we will copy a java code along with it and enctype="multipart/form-data this is used for uploading of a file-->
+      <div class="mb-3">   <!--Here <div class="mb-3" is a class for which margin bottom 3 space is given-->
+          <label for="title" class=" form-label">Title</label>   <!--Here form-label is used for givinng the label to the form and control help to attach the form label with the input form-label and form-control both are bootstrap css (styling form-label → neat label, form-control → styled input)-->
+        <input name = "listing[title]" placeholder =" title" type ="text" class ="form-control" required />
+        <div class="valid-feedback">Title is  good</div>  <!--Here to if it make a invalid inbox show some note or words we use this class ="valid-feedback"-->
+        <div class ="invalid-feedback">Are you serious ??</div> <!--Here when a not valid input is enter the class ="invalid-feedback" is used -->
+      </div>
+      
+      <div class="mb-3">
+        <label for="description" class=" form-label">Description</label>
+        <textarea name ="listing[description]" placeholder =" description" class="form-control" required></textarea>
+        <div class="valid-feedback">Please enter a short description</div>
+        <div class ="invalid-feedback">You Dumb where's the discription</div>
+      </div>
+
+      <div class="row">
+      <div class="mb-3 col-4">
+        <label for="price" class=" form-label">Price</label>
+        <input name ="listing[price]" placeholder =" amount" class="form-control" required/>
+        <div class="valid-feedback">Valid price</div>
+        <div class ="invalid-feedback">Not a valid price</div>
+         </div>
+
+         <div class="mb-3 col-8">
+        <label for="country" class=" form-label">Country</label>
+        <input name ="listing[country]" placeholder =" country" type ="text" class="form-control" required/>
+        <div class="valid-feedback">valid Country</div>
+        <div class ="invalid-feedback">don't you want to go anywhere</div>
+      </div>
+        
+      <div class="mb-3">
+        <label for="location" class=" form-label">Location</label>
+        <input name ="listing[location]" placeholder =" location" type ="text" class="form-control" required/>
+        <div class="valid-feedback">location</div>
+        <div class ="invalid-feedback">please Enter the fucking Location</div>
+      </div>
+        
+       <div class="mb-3">
+         <label for="image" class=" form-label">Upload Image</label>
+         <input name ="listing[image]" type ="file" class="form-control" required/>
+       </div>
+     </div>
+        <button class="btn btn-dark edit-btn ">Edit</button>
+    </form>

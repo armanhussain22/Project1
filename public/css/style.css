@@ -1,0 +1,78 @@
+body {
+    font-family: "Oswald", sans-serif !important;
+     display: flex; 
+     flex-direction: column;
+     min-height: 200vh;
+}
+
+.container{
+    flex: 1;
+}
+
+
+.navbar {
+    height: 5em;
+}
+
+.fa-compass {
+    color:brown;
+}
+.nav-link{
+    color :black;
+    font-size: 2em;
+}
+.f-info-links a {
+     text-decoration: none;
+     color: black;
+}
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+.f-info {
+    background-color: lightgray;
+    text-align: center;
+    justify-content: center;
+}
+
+.listing-card {
+    border: none !important;
+    margin: 2rem;
+
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100%;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text {
+    font-weight: 40%;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay :hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.edit-btn {
+    background-color: red !important;
+    border: none !important;
+}
+

@@ -1,0 +1,13 @@
+<% if(success && success.length) { %> <!--This condition state that if success is present it will display or otherwise it will not display anything && success.length(by default it is set to zero) is used if the success.length is greater than 0 than print the (<%= success %>)-->
+<div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert"> <!--Here alert-dismissible fade show" role="alert" is a bootstrip alert used for displaying a cross at the end of the alert-->
+    <%= success %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> <!--This is also from bootstrip it is used to make the cross displayed in the alert more functional -->
+</div>
+<%} %>
+
+<% if(error && error.length) { %> <!--This condition state that if success is present it will display or otherwise it will not display anything && success.length(by default it is set to zero) is used if the success.length is greater than 0 than print the (<%= success %>)-->
+<div class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert"> <!--Here alert-dismissible fade show" role="alert" is a bootstrip alert used for displaying a cross at the end of the alert-->
+    <%= error %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> <!--This is also from bootstrip it is used to make the cross displayed in the alert more functional -->
+</div>
+<%} %>

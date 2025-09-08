@@ -1,0 +1,55 @@
+<% layout("/layouts/boilerplate") %>
+    <title>Wanderlust</title>
+      <h3>Edit the list</h3>
+     <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+
+        <div class="mb-3">
+          <label for="title" class=" form-label">Title</label>
+          <input name = "listing[title]" class ="form-control" required value ="<%= listing.title %>" type ="text" />
+           <div class="valid-feedback">Title is  good</div>
+           <div class ="invalid-feedback">Are you serious ??</div>
+        </div>
+          
+        <div class="mb-3">
+           <label for="description" class=" form-label">Description</label>
+          <textarea name ="listing[description]" class ="form-control" required><%= listing.description %></textarea>
+          <div class="valid-feedback">Please enter a short description</div>
+          <div class ="invalid-feedback">You Dumb where's the discription</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="price" class=" form-label">Price</label>
+            <input name ="listing[price]"class="form-control" required value ="<%= listing.price %>" />
+            <div class="valid-feedback">Valid price</div>
+            <div class ="invalid-feedback">Not a valid price</div>
+        </div>
+        
+       
+        <div class="mb-3">
+            <label for="location" class=" form-label">Location</label>
+            <input name ="listing[location]" class ="form-control" required value ="<%= listing.location %>" type ="text" />
+            <div class="valid-feedback">location</div>
+            <div class ="invalid-feedback">please Enter the fucking Location</div>
+        </div>
+        
+    
+        <div class="mb-3">
+           <label for="country" class=" form-label">Country</label>
+           <input name ="listing[country]" class="form-control" required value ="<%= listing.country %>" type ="text"/>
+           <div class="valid-feedback">valid Country</div>
+           <div class ="invalid-feedback">don't you want to go anywhere</div>
+        </div>
+
+        <div class="mb-3"> <!--This display the image of the previous image which we want to update-->
+           Original Listing Image <br />
+           <img src= <%= originalImageUrl %> >
+        </div>
+        
+        <div class="mb-3">
+           <label for="image" class=" form-label">Upload New Image</label>
+           <input name ="listing[image]" type="file" class="form-control" required  />
+        </div>
+        
+        <button class ="btn btn-dark  edit-btn mt-3">Edit</button>
+    </form>
+    
